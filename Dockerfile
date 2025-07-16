@@ -19,4 +19,4 @@ RUN poetry config virtualenvs.create false \
 # Expose the port your app runs on
 EXPOSE 8000
 
-CMD ["poetry", "run", "parlant-server"]
+CMD ["poetry", "run", "parlant-server", "run"]
