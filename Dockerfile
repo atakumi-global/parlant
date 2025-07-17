@@ -19,4 +19,5 @@ RUN poetry config virtualenvs.create false \
 # Expose the port your app runs on
 EXPOSE 8000
 
-CMD ["poetry", "run", "parlant-server", "run"]
+# CMD ["poetry", "run", "parlant-server", "run"]
+CMD ["parlant-server", "run", "--provider", "ollama", "--model", "llama3.2:latest"]
