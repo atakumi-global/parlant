@@ -20,4 +20,4 @@ RUN poetry config virtualenvs.create false \
 EXPOSE 8000
 
 # CMD ["poetry", "run", "parlant-server", "run"]
-CMD ["parlant-server", "run", "--provider", "ollama", "--model", "llama3.2:latest"]
+CMD ["poetry", "run", "parlant-server", "run", "--provider", "ollama", "--model", "llama3.2:latest"]
