@@ -14,7 +14,7 @@ COPY pyproject.toml poetry.lock /app/
 COPY src /app/src
 WORKDIR /app
 RUN poetry config virtualenvs.create false \
-    && poetry install --no-root --only main
+    && poetry install --no-root --only main --extras together
 
 # Expose the port your app runs on
 EXPOSE 8000
