@@ -15,7 +15,8 @@ COPY src /app/src
 WORKDIR /app
 RUN poetry config virtualenvs.create false \
     && poetry config installer.max-workers 1 \
-    && poetry install --no-root --only main --extras together
+    && poetry install --no-root --only main
+RUN pip install --no-cache-dir together
 
 
 # Expose the port your app runs on
